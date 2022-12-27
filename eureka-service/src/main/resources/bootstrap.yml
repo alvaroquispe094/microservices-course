@@ -1,7 +1,7 @@
 
 spring:
   application:
-    name: eoreka-service
+    name: eureka-service
   cloud:
     config:
       enabled: true
