@@ -75,7 +75,7 @@ public class UsuarioService {
 
         resultado.put("Usuario",usuario);
         List<Carro> carros = carroFeignClient.getCarros(usuarioId);
-        if(carros.isEmpty()) {
+        if(carros == null || carros.isEmpty()) {
             resultado.put("Carros", "El usuario no tiene carros");
         }
         else {
@@ -83,7 +83,7 @@ public class UsuarioService {
         }
 
         List<Moto> motos = motoFeignClient.getMotos(usuarioId);
-        if(motos.isEmpty()) {
+        if(motos == null || motos.isEmpty()) {
             resultado.put("Motos", "El usuario no tiene motos");
         }
         else {
